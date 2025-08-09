@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>GymLog</title>
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="styles.css">
+  <meta name="theme-color" content="#0ea5a4">
+</head>
+<body>
+  <div id="app" class="app light">
+    <header class="header">
+      <div>
+        <h1 id="appTitle">سجل التمرين</h1>
+        <p id="appSubtitle">جلسة اليوم</p>
+        <div class="madeby">made by : Mohammed Abdallah</div>
+      </div>
+      <div class="controls">
+        <select id="sessionType" aria-label="Session type">
+          <option>Push</option>
+          <option>Pull</option>
+          <option>Legs</option>
+        </select>
+        <button id="langBtn" class="btn small">English</button>
+        <button id="themeBtn" class="btn small">Dark</button>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="left">
+        <div id="exercisesList" class="cards"></div>
+
+        <div class="actions">
+          <button id="saveSession" class="btn primary">احفظ الجلسة</button>
+          <button id="exportBtn" class="btn">تصدير</button>
+          <label class="btn filelabel">استيراد<input id="importFile" type="file" accept="application/json" hidden></label>
+        </div>
+      </section>
+
+      <aside class="right">
+        <div class="panel">
+          <h3 id="libraryTitle">التمارين</h3>
+          <div id="libraryList" class="library"></div>
+          <hr>
+          <h4>History</h4>
+          <div id="historyList" class="history"></div>
+        </div>
+      </aside>
+    </main>
+
+    <footer class="footer">GymLog • PWA</footer>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>
